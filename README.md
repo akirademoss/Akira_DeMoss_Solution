@@ -33,7 +33,7 @@ python3 solution.py
 
 ###### **Figure 2.** Upon successful conversion, the terminal will print the new file's location which will be in the same directory as the original file
 
-### Challenge Reflection
+# Challenge Reflection
 
 
 **Problem Solving**
