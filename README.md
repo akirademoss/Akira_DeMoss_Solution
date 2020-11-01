@@ -24,6 +24,7 @@ sudo apt-get install python3-tk tk-dev
 python3 solution.py
 ```
 ![usage_example1](https://user-images.githubusercontent.com/8731829/97803340-25d90980-1c0f-11eb-8a33-b5b3db070c3d.png)
+
 ###### **Figure 1.** When running the script, a file browsing GUI where you can select the file you would like to transform will pop up.
 
 **4.) View converted file in same directory as original file**
