@@ -36,13 +36,13 @@ python3 solution.py
 # Challenge Reflection
 
 
-**Problem Solving**
-
-The main challenge I faced when writing this script was how to parse the data from the log file in a way that was both simple and intuitive.  After recognizing that the log file data was in python dictionary format, I began to look into ways to parse a text dictionary into a python dictionary data structure.  I found the simplest way to do this was to use the json library.  To convert the given logs file into csv format, my solution first opens the file the user wants to transform.  Once open, the file is read line by line.  Because each line is a string, it is easily converted into a dictionary data structure using the ```json.loads()``` method after simply replacing each instance of the apostrophe character (```'```) with the quotation mark character(```"```) character.  Once this was completed it was easy to access each column by indexing through the dictionary.  The final result of this allowed me to design a simple function to convert the orders measured in metric to imperial and write the data to a new ```.csv``` file.
-
 **Design**
 
 I wanted to make sure that the script was easy and intuitive to use so I designed it in a way that the user could choose the file they wished to transform using a GUI.  Additionaly for ease of use I designed the script to output the transformed file in the same path the original file was located.  In respect to the low-level design, I designed my functions in a way that could easily be added on to to support different types of file conversions.  Finally the column data is stored in a queue which is later popped so that the space complexity is O(1) making my solution easily upgradable to handling multiple files at once.
+
+**Problem Solving**
+
+The main challenge I faced when writing this script was how to parse the data from the log file in a way that was both simple and intuitive.  After recognizing that the log file data was in python dictionary format, I began to look into ways to parse a text dictionary into a python dictionary data structure.  I found the simplest way to do this was to use the json library.  To convert the given logs file into csv format, my solution first opens the file the user wants to transform.  Once open, the file is read line by line.  Because each line is a string, it is easily converted into a dictionary data structure using the ```json.loads()``` method after simply replacing each instance of the apostrophe character (```'```) with the quotation mark character(```"```) character.  Once this was completed it was easy to access each column by indexing through the dictionary.  The final result of this allowed me to design a simple function to convert the orders measured in metric to imperial and write the data to a new ```.csv``` file.
 
 **Summary**
 
