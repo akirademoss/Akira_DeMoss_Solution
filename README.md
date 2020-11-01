@@ -1,5 +1,5 @@
 # Overview
-The goal of this challenge was to transform the data given in the ```records.log'``` file into a .csv wtih the following columns: ```order_id, weight (lbs), volume (in3)```. 
+The goal of this challenge was to transform the data given in the ```records.log``` file into a ```.csv``` wtih the following columns: ```order_id, weight (lbs), volume (in3)```. 
 
 # Instructions for Use on Linux Ubuntu
 
@@ -38,7 +38,7 @@ python3 solution.py
 
 **Problem Solving**
 
-The main challenge I faced when writing this script was how to parse the data from the log file in a way that was both simple and intuitive.  After recognizing that the log file data was in the dictionary format, I began to look into ways to parse a text dictionary into a python dictionary data structure.  I found the simplest way to do this was to use the json library.  My solution opens the file the user wants to transform and reads the file line by line.  In order to parse the data using the ```json.loads(')``` method, I simply first replace the ```'``` character with the ```"``` character.  
+The main challenge I faced when writing this script was how to parse the data from the log file in a way that was both simple and intuitive.  After recognizing that the log file data was in python dictionary format, I began to look into ways to parse a text dictionary into a python dictionary data structure.  I found the simplest way to do this was to use the json library.  To convert the given logs file into csv format, my solution first opens the file the user wants to transform.  Once open, the file is read line by line.  Because each line is a string, it is easily converted into a dictionary data structure using the ```json.loads()``` method after simply replacing each instance of the apostrophe character (```'```) with the quotation mark character(```"```) character.  Once this was completed it was easy to access each column by indexing through the dictionary.  The final result of this allowed me to design a simple function to convert the orders measured in metric to imperial and write the data to a new ```.csv``` file.
 
 **Design**
 
